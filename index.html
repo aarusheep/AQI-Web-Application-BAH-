@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Quality Index Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding: 20px;
+      border: 2px solid black;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header div {
+      flex: 1;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .dropdowns {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+
+    .dropdowns select {
+      flex: 1;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    .content {
+      display: flex;
+      gap: 20px;
+    }
+
+    .map-box, .details-box {
+      flex: 1;
+      border: 2px solid black;
+      padding: 15px;
+      height: 400px;
+      overflow-y: auto;
+    }
+
+    .details-box img {
+      width: 100%;
+    }
+
+    .map-text {
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div>LOGO</div>
+      <div>AIR QUALITY INDEX (Title)</div>
+      <div>BAH</div>
+    </div>
+
+    <!-- dropdowns ps: add more optiions in each dropdown -->
+    <div class="dropdowns">
+      <select name="state">
+        <option>State dropdown</option>
+      </select>
+      <select name="city">
+        <option>City dropdown</option>
+      </select>
+      <select name="date">
+        <option>Date dropdown</option>
+      </select>
+      <select name="time">
+        <option>Time dropdown</option>
+      </select>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+      <!-- left side -->
+      <div class="map-box">
+        <div class="map-text">
+          AQI MAP for that location which should be color coded:<br>
+          <strong>Green</strong> is okay and <strong>Red</strong> is hazardous.
+        </div>
+      </div>
+
+      <!-- right side -->
+      <div class="details-box">
+        <div class="box-title"><strong>Box with all the Details</strong></div>
+        <!-- details ka image -->
+        <img src="/img.png" alt="AQI Data Details">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
